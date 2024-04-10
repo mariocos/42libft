@@ -49,7 +49,6 @@ char	*ft_itoa(int n)
 	char	*ret;
 	long	nb;
 	int		count;
-	char	hold;
 
 	count = countsize(n);
 	if (n == 0)
@@ -65,7 +64,6 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		hold = (nb % 10) + 48;
 		ret[--count] = (nb % 10) + 48;
 		nb /= 10;
 	}

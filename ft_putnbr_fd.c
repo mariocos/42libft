@@ -16,14 +16,11 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
-	int		signal;
 
-	signal = 1;
 	nb = n;
 	if (nb < 0)
 	{
 		nb *= -1;
-		signal = -1;
 		write(1, "-", 1);
 	}
 	if (nb >= 10)
