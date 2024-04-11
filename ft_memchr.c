@@ -6,7 +6,7 @@
 /*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 11:40:23 by mario             #+#    #+#             */
-/*   Updated: 2024/04/11 17:39:38 by mario            ###   ########.fr       */
+/*   Updated: 2024/04/11 18:37:58 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (hold + ft_strlen((const char *)hold));
 	while (i < n)
 	{
-		if (*hold == c)
+		if (*hold == (unsigned char) c)
 			return (hold);
 		hold++;
 		i++;
