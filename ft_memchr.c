@@ -6,7 +6,7 @@
 /*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 11:40:23 by mario             #+#    #+#             */
-/*   Updated: 2024/04/11 15:10:08 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 15:11:03 by mariocos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	if (n == 0)
 		return (NULL);
 	if (c == 0)
-		return (s + ft_strlen((char const *)s));
+		return ((unsigned char *)s + ft_strlen((char const *)s));
 	while (i < n)
 	{
 		if (*(unsigned char *)s == c)
