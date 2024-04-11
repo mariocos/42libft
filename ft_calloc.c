@@ -6,7 +6,7 @@
 /*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 23:31:09 by mario             #+#    #+#             */
-/*   Updated: 2024/04/11 17:32:53 by mario            ###   ########.fr       */
+/*   Updated: 2024/04/11 17:51:32 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-void	*ft_calloc(unsigned int nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 

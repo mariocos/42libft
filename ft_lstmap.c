@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:52:23 by mariocos          #+#    #+#             */
-/*   Updated: 2024/04/11 17:00:09 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:37:44 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!hold)
 		{
 			ft_lstclear(&s, del);
-			return (NULL)
+			return (NULL);
 		}
 		ft_lstadd_back(&s, hold);
 		lst = lst->next;
 	}
-	return (s);	
+	return (s);
 }

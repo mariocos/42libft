@@ -6,7 +6,7 @@
 /*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 22:38:35 by mario             #+#    #+#             */
-/*   Updated: 2024/04/11 17:31:21 by mario            ###   ########.fr       */
+/*   Updated: 2024/04/11 17:47:09 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == hold)
-			return ((const char *)s);
+			return ((char *)s);
 		s++;
 	}
 	if (hold == '\0')

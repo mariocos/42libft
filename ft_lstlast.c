@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:02:50 by mariocos          #+#    #+#             */
-/*   Updated: 2024/04/11 16:04:54 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:36:56 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return(NULL);
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
