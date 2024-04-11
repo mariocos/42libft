@@ -6,7 +6,7 @@
 /*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 11:35:26 by mario             #+#    #+#             */
-/*   Updated: 2024/04/11 14:02:53 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:07:12 by mariocos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (s1[i] == s2[i] && i < n)
+	while (s1[i] == s2[i] && i + 1 < n)
 		i++;
 	ret = s1[i] - s2[i];
 	return (ret);
