@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 22:38:35 by mario             #+#    #+#             */
-/*   Updated: 2024/04/11 14:48:34 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:31:21 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == hold)
-			return ((char *)s);
+			return ((const char *)s);
 		s++;
 	}
 	if (hold == '\0')

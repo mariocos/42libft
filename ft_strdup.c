@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 23:37:46 by mario             #+#    #+#             */
-/*   Updated: 2024/04/10 21:20:46 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:31:11 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	str_len = ft_strlen((char *)s);
+	str_len = ft_strlen((const char *)s);
 	dest = malloc(str_len);
 	if (dest == NULL)
 		return (NULL);

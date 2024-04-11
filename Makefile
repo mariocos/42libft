@@ -58,12 +58,12 @@ ${NAME}: ${OBJS}
 
 all: ${NAME}
 
+clean: 
+       ${RM} ${OBJS}
+
 fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
-
-rmo:
-	${RM} *.o
 
 .PHONY: all fclean clean re

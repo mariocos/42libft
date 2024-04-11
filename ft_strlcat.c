@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 09:15:15 by mario             #+#    #+#             */
-/*   Updated: 2024/04/10 21:23:03 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:30:38 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dstlen;
 	size_t	srclen;
 
-	srclen = ft_strlen((char *)src);
+	srclen = ft_strlen((const char *)src);
 	dstlen = 0;
 	while (dst[dstlen] != '\0' && dstlen < size)
 		dstlen++;

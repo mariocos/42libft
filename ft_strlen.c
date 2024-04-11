@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 21:05:57 by mario             #+#    #+#             */
-/*   Updated: 2024/04/10 21:24:19 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:28:21 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
