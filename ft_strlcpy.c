@@ -6,7 +6,7 @@
 /*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 22:20:15 by mario             #+#    #+#             */
-/*   Updated: 2024/04/11 14:22:52 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:24:36 by mariocos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	count = 0;
 	while (src[count] != '\0')
 		count++;
-	while (i + 1 < size && src[i] != '\0')
+	if (size != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (i + 1 < size && src[i] != '\0')
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
 	return (count);
 }
