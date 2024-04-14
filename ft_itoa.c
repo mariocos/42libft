@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:38:10 by mariocos          #+#    #+#             */
-/*   Updated: 2024/04/09 15:10:37 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/14 19:18:53 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 int	countsize(int n)
 {
@@ -37,10 +38,11 @@ char	*vazio(void)
 {
 	char	*ret;
 
-	ret = malloc(sizeof(int));
+	ret = malloc(2);
 	if (ret == NULL)
 		return (NULL);
 	ret[0] = '0';
+	ret[1] = '\0';
 	return (ret);
 }
 
@@ -53,7 +55,7 @@ char	*ft_itoa(int n)
 	count = countsize(n);
 	if (n == 0)
 		return (vazio());
-	ret = malloc(sizeof(int) * count);
+	ret = malloc(count + 1);
 	if (ret == NULL)
 		return (NULL);
 	nb = n;

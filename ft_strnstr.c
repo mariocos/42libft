@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 13:30:08 by mario             #+#    #+#             */
-/*   Updated: 2024/04/10 21:27:03 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/11 22:33:07 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	j = 0;
 	i = 0;
+	if (!*little)
+		return ((char *)big);
 	while (i < len && *big)
 	{
 		j = 0;

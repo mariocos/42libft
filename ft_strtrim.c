@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:00:38 by mariocos          #+#    #+#             */
-/*   Updated: 2024/04/10 21:28:50 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/12 20:56:55 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	sizeto(char const *s1, char const *set)
 			ret++;
 		i++;
 	}
-	return (ret);
+	return (ret + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
