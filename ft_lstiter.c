@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:42:42 by mariocos          #+#    #+#             */
-/*   Updated: 2024/04/11 16:51:58 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/15 16:10:05 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
+	if (!f)
 		return ;
-	while (lst != NULL)
+	while (lst)
 	{
 		(*f)(lst->content);
 		lst = lst->next;
