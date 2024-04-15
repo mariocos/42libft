@@ -33,7 +33,11 @@ SRCS = ft_isalpha.c \
 	   ft_putendl_fd.c \
 	   ft_putnbr_fd.c
 
+SRCS_BONUS = ft_lstnew.c ft_lstadd_back.c ft_lstsize.c ft_lstadd_front.c ft_lstlast.c
+
 OBJS = ${SRCS:.c=.o}
+
+OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
 NAME = libft.a
 
@@ -57,6 +61,9 @@ ${NAME}: ${OBJS}
 	${RANLIB} ${NAME}
 
 all: ${NAME}
+
+bonus : ${OBJS} ${OBJS_BONUS}
+	${AR} ${NAME} ${OBJS} ${OBJS_BONUS}
 
 clean:
 		${RM} ${OBJS}
