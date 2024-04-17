@@ -6,7 +6,7 @@
 /*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:21:05 by mariocos          #+#    #+#             */
-/*   Updated: 2024/04/10 21:17:10 by mariocos         ###   ########.fr       */
+/*   Updated: 2024/04/17 13:53:06 by mariocos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,22 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	nb;
-
-	nb = n;
-	if (nb < 0)
+	if (n == -2147483648)
 	{
-		nb *= -1;
-		write(1, "-", 1);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd('8', fd);
 	}
-	if (nb >= 10)
-		ft_putnbr_fd(nb / 10, fd);
-	nb = nb % 10 + 48;
-	ft_putchar_fd(nb, fd);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else
+	{
+		if (n > 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+		}
+		ft_putchar_fd(48 + (n % 10), fd);
+	}
 }

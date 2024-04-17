@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mariocos <mariocos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 11:47:20 by mariocos          #+#    #+#             */
-/*   Updated: 2024/04/14 18:53:25 by mario            ###   ########.fr       */
+/*   Updated: 2024/04/17 13:12:02 by mariocos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,61 +31,42 @@ int	countwords(char const *s, char c)
 		if (s[i] == c)
 			i++;
 	}
-	return (count + 1);
+	return (count);
 }
 
-char	*alocword(char *s, int i, char c)
+int	wordlen(char *s, char c)
 {
-	int		k;
-	char	*ret;
+	int	i;
 
-	k = 0;
-	while (s[i++] != c)
-		k++;
-	i -= k + 1;
-	ret = malloc(k + 1);
-	k = 0;
-	if (ret == NULL)
-		return (NULL);
-	while (s[i] != c)
-		ret[k++] = s[i++];
-	ret[k] = '\0';
-	return (ret);
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
+		i++;
+	return (i);
 }
-
-char	**nullsplit(char const *s)
-{
-	char	**ret;
-
-	ret = malloc(sizeof(char *) * 2);
-	ret[0] = ft_strdup(s);
-	ret[1] = NULL;
-	return (ret);
-}
-
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptrs;
+	int		wordcount;
+	char	**ret;
 	int		i;
-	int		j;
 
+	if (!s)
+		return (0);
+	wordcount = countwords(s, c);
+	ret = malloc(sizeof(char *) * (wordcount + 1));
+	if (!ret)
+		return (0);
 	i = 0;
-	j = 0;
-	if (c == 0 && *s)
-		return (nullsplit(s));
-	ptrs = malloc(sizeof(char *) * countwords(s, c));
-	if (ptrs == NULL)
-		return (NULL);
-	while (s[i] != '\0')
+	while (wordcount--)
 	{
-		if (s[i] != c)
-			ptrs[j++] = alocword((char *)s, i, c);
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if (s[i] == c)
-			i++;
+		while (*s == c && *s)
+			s++;
+		ret[i] = ft_substr((char *)s, 0, wordlen((char *)s, c));
+		if (!ret[i])
+			return (0);
+		s += wordlen((char *)s, c);
+		i++;
 	}
-	ptrs[j] = '\0';
-	return (ptrs);
+	ret[i] = NULL;
+	return (ret);
 }
