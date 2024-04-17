@@ -33,7 +33,7 @@ SRCS = ft_isalpha.c \
 	   ft_putendl_fd.c \
 	   ft_putnbr_fd.c
 
-SRCS_BONUS = ft_lstnew.c ft_lstadd_back.c ft_lstsize.c ft_lstadd_front.c ft_lstlast.c ft_lstmap.c
+SRCS_BONUS = ft_lstlast.c ft_lstnew.c ft_lstadd_back.c ft_lstsize.c ft_lstadd_front.c ft_lstmap.c ft_lstclear.c
 
 OBJS = ${SRCS:.c=.o}
 
