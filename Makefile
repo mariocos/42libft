@@ -49,7 +49,7 @@ RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
 
-AR = ar rcs
+AR = ar rc
 
 RANLIB = ranlib
 
@@ -66,7 +66,7 @@ bonus : ${OBJS} ${OBJS_BONUS}
 	${AR} ${NAME} ${OBJS} ${OBJS_BONUS}
 
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean: clean
 	${RM} ${NAME}
